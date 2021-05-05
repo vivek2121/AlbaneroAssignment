@@ -37,7 +37,7 @@ public class BookController {
 		Map<String, List<String>> map = bookService.getMetaData();
 		return map;
 	}
-	@GetMapping("/storebooks")
+	@PostMapping("/storebooks")
 	public Map<String,  List<String>> storeMetaData(BookMetaData bookMetaData) throws ClassNotFoundException, SQLException {
 		Map<String, List<String>> map = bookService.storeMetaData(bookMetaData);
 		return map;
